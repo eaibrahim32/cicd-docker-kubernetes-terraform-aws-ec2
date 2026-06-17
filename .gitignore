@@ -3,3 +3,4 @@ awscliv2.zip
 terraform/.terraform/
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
+devops-key.pem
