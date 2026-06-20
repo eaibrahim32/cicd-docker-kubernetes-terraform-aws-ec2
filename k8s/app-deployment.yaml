@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: web
+          image: devops-app:latest
+          imagePullPolicy: Never
+          env:
+            - name: DB_HOST
+              value: "db"
+            - name: DB_USER
+              value: "root"
+            - name: DB_PASSWORD
+              value: "password"
+            - name: DB_NAME
+              value: "appdb"
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  type: NodePort
+  selector:
+    app: web
+  ports:
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30000
