@@ -310,3 +310,52 @@ echo "✅ README.md created!"
 
 ---
 
+
+---
+
+## 📸 Screenshots
+
+### 1. Terraform Apply — EC2 Instance Provisioned Successfully
+![Terraform Apply](https://github.com/user-attachments/assets/7959507e-1d18-4713-8f84-bd483bca112b)
+
+### 2. AWS EC2 Console — Instance Running (t3.micro)
+![EC2 Console](https://github.com/user-attachments/assets/1a2eaa6b-ce66-4d34-8ca1-0ab8cb430158)
+
+### 3. SSH into EC2 Instance via AWS Key Pair
+![SSH EC2](https://github.com/user-attachments/assets/cfc7e6ad-3558-40b2-89ec-d6df8b414981)
+
+### 4. Docker Compose Up — Web & DB Containers Running
+![Docker Compose](https://github.com/user-attachments/assets/7645a11a-421e-4e4d-a1bf-bb7ee5da4907)
+
+### 5. Flask App Live on EC2 — "Hello from Docker + Jenkins + Terraform!"
+![App Live](https://github.com/user-attachments/assets/5a29ed9e-4298-4097-ae23-80475697fd7f)
+
+### 6. VS Code Port Forwarding — Jenkins (8080) & App (50000)
+![Port Forwarding](https://github.com/user-attachments/assets/c2e5f9f2-a830-4607-b869-7d3d3ddd0fbf)
+
+### 7. Jenkins Initial Setup — Instance Configuration
+![Jenkins Setup](https://github.com/user-attachments/assets/c8235759-e606-47bb-8378-30945a3633c5)
+
+### 8. Jenkins Dashboard — Ready to Build
+![Jenkins Dashboard](https://github.com/user-attachments/assets/37b4088f-c553-4b83-be0c-20210b02d8e8)
+
+### 9. Jenkins Pipeline — First Build Successful (main branch)
+![Jenkins Build](https://github.com/user-attachments/assets/ca880ad6-06ea-4262-9176-0b595fc57847)
+
+### 10. Minikube Started & kubectl Nodes/Pods Verified
+![Minikube](https://github.com/user-attachments/assets/53c60b46-01e2-43ab-80ba-7379ff1913d8)
+
+### 11. Kubernetes Services & HPA Configured (min=1, max=5)
+![K8s HPA](https://github.com/user-attachments/assets/b43a9d10-0960-4bd5-8ba8-5e4d80cac5ce)
+
+### 12. HPA Auto-Scaling Under Load — Replicas Scaled to 5
+![HPA Scale Up](https://github.com/user-attachments/assets/9dcd5d24-176b-45ae-872f-4355b47f7f0b)
+
+### 13. Load Generator Deleted — Replicas Scaling Back Down to 1
+![HPA Scale Down](https://github.com/user-attachments/assets/16059c40-0d5a-4dad-ba9d-8cec507366e7)
+
+### 14. AWS CloudWatch EC2 Metrics Dashboard
+![CloudWatch](https://github.com/user-attachments/assets/d9aa1161-f59f-4e84-913d-67fa3412a388)
+
+### 15. Custom CloudWatch Dashboard — DevOps Project CPU Utilization
+![CloudWatch Custom](https://github.com/user-attachments/assets/67a9adac-5b47-441b-95f1-d4c7eb94cec5)
