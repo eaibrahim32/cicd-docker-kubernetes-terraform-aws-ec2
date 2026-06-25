@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 resource "aws_security_group" "app_sg" {
-  name        = "devops-app-sg"
-  description = "Allow SSH and app traffic"
+  name        = "devops-${var.environment}-sg"
+  description = "Allow SSH and app traffic for ${var.environment}"
 
   ingress {
     from_port   = 22
@@ -14,8 +14,15 @@ resource "aws_security_group" "app_sg" {
   }
 
   ingress {
-    from_port   = 5000
-    to_port     = 5000
+    from_port   = var.app_port
+    to_port     = var.app_port
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -25,6 +32,11 @@ resource "aws_security_group" "app_sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name        = "devops-${var.environment}-sg"
+    Environment = var.environment
   }
 }
 
@@ -40,11 +52,10 @@ resource "aws_instance" "app_server" {
               amazon-linux-extras install docker -y
               service docker start
               usermod -a -G docker ec2-user
-              curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-              chmod +x /usr/local/bin/docker-compose
               USERDATA
 
   tags = {
-    Name = "devops-cicd-app-server"
+    Name        = "devops-${var.environment}-server"
+    Environment = var.environment
   }
 }

@@ -9,3 +9,11 @@ variable "instance_type" {
 variable "key_name" {
   default = "devops-key"
 }
+
+variable "environment" {
+  default = "prod"
+}
+
+variable "app_port" {
+  default = 5000
+}
