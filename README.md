@@ -299,6 +299,8 @@ aws cloudwatch describe-alarms --alarm-names "High-CPU-Alert" \
 📧 esaba.ahnaf.3@gmail.com
 💼 [LinkedIn](https://linkedin.com/in/esaba-ahnaf-ibrahim-65b045118)
 🐙 [GitHub](https://github.com/eaibrahim32)
+SCREENSHOTS https://docs.google.com/document/d/1GKdiTmFmPITXy7A8Y_m_o4z-KSa5v_xRjwyBEiAYm-s/edit?tab=t.0
+
 
 ---
 
