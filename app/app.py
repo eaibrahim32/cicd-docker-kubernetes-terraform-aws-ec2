@@ -5,12 +5,15 @@ import os
 app = Flask(__name__)
 
 def get_db_connection():
+    port_str = os.environ.get("DB_PORT", "3306")
+    port = int(port_str) if port_str and port_str.strip() else 3306
+
     return mysql.connector.connect(
         host=os.environ.get("DB_HOST", "db"),
         user=os.environ.get("DB_USER", "root"),
         password=os.environ.get("DB_PASSWORD", "password"),
         database=os.environ.get("DB_NAME", "appdb"),
-        port=int(os.environ.get("DB_PORT", 3306))
+        port=port
     )
 
 @app.route("/")
