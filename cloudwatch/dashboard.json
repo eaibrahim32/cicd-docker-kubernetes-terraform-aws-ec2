@@ -1,0 +1,45 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0, "y": 0, "width": 12, "height": 6,
+      "properties": {
+        "metrics": [
+          ["AWS/EC2", "CPUUtilization", "InstanceId", "i-081f71aea2a3b5d5c"]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "ap-southeast-1",
+        "title": "EC2 CPU Utilization"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0, "y": 6, "width": 12, "height": 6,
+      "properties": {
+        "metrics": [
+          ["AWS/EC2", "NetworkIn", "InstanceId", "i-081f71aea2a3b5d5c"],
+          ["AWS/EC2", "NetworkOut", "InstanceId", "i-081f71aea2a3b5d5c"]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "ap-southeast-1",
+        "title": "Network In/Out"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0, "y": 12, "width": 12, "height": 6,
+      "properties": {
+        "metrics": [
+          ["AWS/EBS", "VolumeReadBytes", "VolumeId", "vol-0fddda83a12f465e8"],
+          ["AWS/EBS", "VolumeWriteBytes", "VolumeId", "vol-0fddda83a12f465e8"]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "ap-southeast-1",
+        "title": "EBS Disk Read/Write"
+      }
+    }
+  ]
+}
